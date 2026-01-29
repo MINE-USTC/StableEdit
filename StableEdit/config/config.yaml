@@ -1,0 +1,14 @@
+defaults:
+- _self_
+- dataset: zsre
+- model: llama-3-instruct
+- editor: stableedit
+num_seq: 200
+num_seq_zsre: 20
+num_seq_wikibigedit: 20
+model_device: cuda:0
+editor_device: cuda:0
+downstream_eval_steps: 0
+
+model_cache: False
+model_cache_dir: ''

@@ -1,0 +1,11 @@
+name: stableedit
+lr: 1e-6 
+batch_size: 128
+token: ans
+cache_dir: cache
+save_checkpoint: False
+load_checkpoint: False
+alpha: 1.0 # weights decay
+RunningMeanStd_mode: stable
+preheat_mode: start    # start|q1|middle|q3|end|none
+
