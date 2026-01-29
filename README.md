@@ -1,5 +1,5 @@
 ## Dataset Preparation
-We use the same raw datasets as \textsc{ULTRAEDIT}.
+We use the same raw datasets as ULTRAEDIT.
 ## 🚀 Setup
 
 Create the environment and install dependencies:
