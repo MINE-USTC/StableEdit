@@ -17,10 +17,15 @@ Based on the theoretical analysis in the paper, StableEdit strengthens lifelong 
 - full whitening of editing features
 - ridge-regularized updates with bounded norms and improved orthogonality
 
+<p align="center">
+  <img src="assets/images/motivation.png" alt="Motivation of StableEdit" width="48%">
+  <img src="assets/images/algorithm.png" alt="StableEdit algorithm overview" width="48%">
+</p>
+
 ## Highlights
 
 - A theoretical account of why LN stabilizes lifelong sequential editing.
-- A practical editor, `stableedit`, with minimal overhead over existing pipelines.
+- A practical editor, `StableEdit`, with minimal overhead over existing pipelines.
 
 ## Repository Structure
 
@@ -101,7 +106,7 @@ python main.py dataset=zsre model=mistral-7b editor=stableedit num_seq=200 \
 Below are the explanations for each argument:
 
 - `dataset`: dataset name, such as `zsre`, `fever`, `wikibigedit`, or `ultraeditbench`
-- `model`: model preset, such as `mistral-7b`, `llama-3-instruct`, `gpt-j`, or `qwen2.5-7b`
+- `model`: model preset, such as `Mistral-7B-v0.3`, `Llama-3-8B-Instruct`, `GPT-J-6B`, or `Qwen2.5-7B-Instruct`
 - `editor`: editing method, such as `StableEdit`, `ULTRAEDIT`, `RLEdit`, `MALMEN`, or `MEND`
 - `num_seq`: total number of sequential editing steps during evaluation
 - `num_seq_zsre`: number of warm-up training steps used for `zsre`, `fever`, and `ultraeditbench`
@@ -120,8 +125,8 @@ Below are the explanations for each argument:
 
 ## Acknowledgements
 
-This repository builds on the broader lifelong model editing literature and experimental setups. We thank [ULTRAEDIT](https://github.com/XiaojieGu/UltraEdit) for their contributions to the field.
+This repository is built on prior work in lifelong model editing and benefits from the open-source ecosystem around sequential editing research. We especially thank the [ULTRAEDIT](https://github.com/XiaojieGu/UltraEdit) project for their contributions to the field.
 
 ## Contact
 
-For questions about the paper or code, please contact 2095835228@qq.com.
+For questions about the paper or code, please contact `2095835228@qq.com`.
