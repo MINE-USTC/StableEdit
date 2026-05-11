@@ -4,7 +4,7 @@ omegaconf==2.3.0
 sentencepiece==0.1.99
 tqdm==4.66.3
 transformers==4.51.3
-wandb==0.15.8
+swanlab==0.7.13
 nltk==3.9.1
 scikit-learn==1.5.2
 scipy==1.14.1
