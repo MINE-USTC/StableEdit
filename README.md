@@ -130,3 +130,10 @@ This repository is built on prior work in lifelong model editing and benefits fr
 ## Contact
 
 For questions about the paper or code, please contact `2095835228@qq.com`.
+
+## Citation
+
+If you find this work useful, please cite:
+```bibtex
+
+
