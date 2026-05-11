@@ -22,10 +22,7 @@ def load_data(filename):
 FEW_SHOT_TEST_SPLIT = 100
 
 def load_data_split(filename, number_of_few_shots, number_of_tests):
-    # a_file = open(filename, "rb")# 'rb'是文件打开模式，以二进制读取模式打开文件，即read binary,这里使用的原因是要读取pickle文件
-    # 序列化（Serialization）：将 Python 对象转换为字节流（二进制数据），以便存储到文件或通过网络传输。反序列化（Deserialization）：将字节流转换回 Python 对象。
-    # pickle 是 Python 的内置序列化模块：pickle.dump() - 序列化并保存到文件；pickle.load() - 从文件加载并反序列化；
-    # pickle支持几乎所有 Python 类型：列表、字典、元组、集合、类实例等，保持对象结构：嵌套关系、引用关系都能保持，高效：专为 Python 设计，速度快
+
     # output = pickle.load(a_file)
     # a_file.close()
     with open(filename, "rb") as f:
@@ -38,7 +35,7 @@ def load_data_split(filename, number_of_few_shots, number_of_tests):
     allow_few_shots, allow_tests = output[:FEW_SHOT_TEST_SPLIT], output[FEW_SHOT_TEST_SPLIT:]
     return allow_few_shots[:number_of_few_shots], allow_tests[:number_of_tests]
 
-# 3.1 将下面的代码中的"llama3-8b-instruct": 4096改为"meta-llama-3-8b-instruct": 4096
+
 MODEL_NAME_TO_MAXIMUM_CONTEXT_LENGTH_MAP = {
     "gpt2-xl": 1024,
     "llama-2-7b-hf": 4096,
