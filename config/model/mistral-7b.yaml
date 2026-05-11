@@ -1,4 +1,4 @@
-name_or_path: mistralai/Mistral-7B-v0.3
+name_or_path: mistralai/Mistral-7B-v0.3 # your/path/mistral-7b
 name: mistral-7b
 model_vec_size: 18432
 class_name: AutoModelForCausalLM
