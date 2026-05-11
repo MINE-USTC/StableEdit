@@ -109,13 +109,13 @@ Below are the explanations for each argument:
 - `model`: model preset, such as `Mistral-7B-v0.3`, `Llama-3-8B-Instruct`, `GPT-J-6B`, or `Qwen2.5-7B-Instruct`
 - `editor`: editing method, such as `StableEdit`, `ULTRAEDIT`, `RLEdit`, `MALMEN`, or `MEND`
 - `num_seq`: total number of sequential editing steps during evaluation
-- `num_seq_zsre`: number of warm-up training steps used for `zsre`, `fever`, and `ultraeditbench`
-- `num_seq_wikibigedit`: number of warm-up training steps used for `wikibigedit`
+- `num_seq_zsre`: number of warm-up steps used for `zsre`, `fever`, and `ultraeditbench`
+- `num_seq_wikibigedit`: number of warm-up steps used for `wikibigedit`
 - `dataset.n_edits`: number of edit instances per sequential step
 - `dataset.batch_size`: mini-batch size for preparing edit tuples
 - `editor.batch_size`: batch size used inside the editor when solving parameter updates
 - `editor.lr`: editing step size
-- `editor.alpha`: ridge regularization strength in StableEdit
+- `editor.alpha`: ridge regularization strength in `StableEdit`
 - `editor.RunningMeanStd_mode`: running-statistics mode for lifelong normalization ('stable' for `StableEdit`, 'original' for `ULTRAEDIT`)
 - `editor.preheat_mode`: warm-up position for statistics initialization, one of `start`, `q1`, `middle`, `q3`, `end`, or `none`
 - `editor.cache_dir`: directory used to store intermediate cached keys and value gradients
