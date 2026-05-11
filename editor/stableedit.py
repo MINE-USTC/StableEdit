@@ -42,7 +42,7 @@ def pad_tensor(tensor, target_length, dim=0, padding_value=0):
         return torch.cat([tensor, pad_tensor], dim=dim)
 
 
-class ULTRAEDIT(BaseEditor):
+class STABLEEDIT(BaseEditor):
 
     def __init__(
         self,
@@ -159,7 +159,7 @@ class ULTRAEDIT(BaseEditor):
 
 
 
-    def cache(self, tuples: List[Dict[str, torch.LongTensor]], keepsame: bool = False, mode="inference"):
+    def cache(self, tuples: List[Dict[str, torch.LongTensor]], mode="inference"):
 
 
         
@@ -188,12 +188,7 @@ class ULTRAEDIT(BaseEditor):
                 keys = tr[module_name].keys.to(torch.float32).to(self.config.editor_device) 
                 values_grad = tr[module_name].values_grad.to(torch.float32).to(self.config.editor_device) 
                 
-                if self.config.editor.use_muon:
-                    values_grad = self.newtonschulz5(values_grad)
-                
-                if not keepsame:
-                    self.lifelong_normalizer[str(shape)].update(torch.cat((keys, values_grad), -1), mode=mode)
-                
+                self.lifelong_normalizer[str(shape)].update(torch.cat((keys, values_grad), -1), mode=mode)
                 
                 
                 dir_path = f"{self.config.editor.cache_dir}/{self.config.model.name}_{self.config.dataset.name}_{self.config.editor.name}_{self.config.dataset.n_edits}_{self.config.num_seq}_{self.time}"
