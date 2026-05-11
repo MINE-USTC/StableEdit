@@ -1,4 +1,4 @@
-name_or_path: "meta-llama/Meta-Llama-3-8B-Instruct" 
+name_or_path: "meta-llama/Meta-Llama-3-8B-Instruct" # your/path/Llama3-8B
 name: "Llama3-8B" 
 model_vec_size: 18432
 class_name: AutoModelForCausalLM
@@ -35,18 +35,5 @@ edit_modules:
 # - model.layers.28.mlp.up_proj
 # - model.layers.29.mlp.up_proj
 # - model.layers.30.mlp.up_proj
-
-# counterfact
-# - model.layers.23.mlp.down_proj
-# - model.layers.24.mlp.down_proj
-# - model.layers.25.mlp.down_proj
-# - model.layers.26.mlp.down_proj
-# - model.layers.27.mlp.down_proj
-# - model.layers.28.mlp.down_proj
-# - model.layers.29.mlp.down_proj
-# - model.layers.30.mlp.down_proj
-# - model.layers.31.mlp.down_proj
-
-
 
 half: True
