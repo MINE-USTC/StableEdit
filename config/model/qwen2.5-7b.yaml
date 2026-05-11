@@ -1,4 +1,4 @@
-name_or_path: Qwen/Qwen2.5-7B-Instruct
+name_or_path: Qwen/Qwen2.5-7B-Instruct # your/path/Qwen2.5-7B-Instruct
 name: Qwen2.5-7B-Instruct
 model_vec_size: 18432
 class_name: AutoModelForCausalLM
