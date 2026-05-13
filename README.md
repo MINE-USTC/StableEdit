@@ -135,5 +135,13 @@ For questions about the paper or code, please contact `xinma@mail.ustc.edu.cn`.
 
 If you find this work useful, please cite:
 ```bibtex
-
+@misc{ma2026editsstableunderstandinglifelong,
+      title={More Edits, More Stable: Understanding the Lifelong Normalization in Sequential Model Editing}, 
+      author={Xin Ma and Wei Chen and Qi Liu and Derong Xu and Zhi Zheng and Tong Xu and Enhong Chen},
+      year={2026},
+      eprint={2605.11836},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2605.11836}, 
+}
 
